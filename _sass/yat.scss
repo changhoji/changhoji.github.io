@@ -2,6 +2,7 @@
 
 // Define defaults for each variable.
 
+$base-font-family: Helvetica, Arial, Oswald, sans-serif, !default;
 $base-font-size: 14px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -33,7 +34,7 @@ $banner-text-color: lighten($white-color, 0%) !default;
 $banner-background: rgba(0,0,0,0.8) !default;
 
 // Width of the content area
-// $content-width:    920px !default;
+$content-width:    920px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
@@ -64,6 +65,5 @@ $on-laptop:        800px !default;
   "misc/article-menu",
   "misc/common-list",
   "misc/google-translate",
-  "misc/gitment",
-  "misc/click-to-top"
+  "misc/gitment"
 ;

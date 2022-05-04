@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACjB,KAAK,EAAE,kBAAkB;CAC1B;;AAED,AAAA,sBAAsB,CAAC;EACrB,gBAAgB,EAAE,OAAO;CAC1B;;AAED,AAAA,qBAAqB,EAAE,oBAAoB,CAAC;EAC1C,gBAAgB,EAAE,IAAI;EACtB,aAAa,EAAE,cAAc;CAC9B;;AAED,AAAA,mBAAmB,CAAC;EAClB,IAAI,EAAE,OAAO;CACd",
+    "sources": [
+        "gitment.scss"
+    ],
+    "names": [],
+    "file": "gitment.css"
+}
