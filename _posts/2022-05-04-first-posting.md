@@ -1,16 +1,12 @@
 ---
 layout: post
-title: My First Posting
-subtitle: this is subtitle
+title: 블로그 개설
+subtitle: Hello World!
 author: changhoji
-categories: jekyll
-tags: general
+categories: general
 sidebar: []
 ---
 
-이게 글내용?
+## 창호지의 블로그 개설
 
-## 이게 제목?
-
-dd
-
+BOJ문제풀이, 알고리즘 설명 등을 적을 예정입니다.
