@@ -23,15 +23,15 @@ tags: graph
 ## **그래프의 종류**
 - Undirected Graph (무방향 그래프): 방향이 없는 간선들로 이루어진 그래프
 
-<img src = "../assets/images/graph/undirected-graph.png" width = "30%" height = "70%" alt="undirected graph"> (1)
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/undirected-graph.png" width = "30%" height = "70%" alt="undirected graph"> (1)
 
 - Directed Graph (방향 그래프): 간선에 방향이 존재하는 그래프
 
-<img src = "../assets/images/graph/directed-graph.png" width = "30%"> (2)
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/directed-graph.png" width = "30%"> (2)
 
 - Weighted Graph (가중 그래프): 간선에 가중치가 존재하는 그래프 (Undirected Graph도 Weighted Graph가 될 수 있음)
 
-<img src = "../assets/images/graph/weighted-graph.png" width = "30%"> (3)
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/weighted-graph.png" width = "30%"> (3)
 
 - 그 외에 simple graph, multigraphs, pseudo graph 등이 존재합니다.
 
