@@ -103,13 +103,8 @@ adjMatrix[1][3] = 1 이면 adjList[1].push_back(3); 과 같이 처리합니다.
 adjMatrix에서 값이 0이던 부분을 생략하므로 메모리와 순회 시간을 아낄 수 있습니다.
 
 
-~~~
-가중 그래프에서는 vector<int> adjList[5]; 대신
-
-vector<pair<int, int>> adjList[5]; 와 같이 선언하고
-
+가중 그래프에서는 vector<int> adjList[5]; 대신 vector<pair<int, int>> adjList[5]; 와 같이 선언하고
 vector에 들어가는 pair의 first를 연결된 정점의 번호로, second를 간선의 가중치로 표현할 수 있습니다.
-~~~
 
 ---
 
