@@ -43,7 +43,7 @@ tags: graph
 - in-degree (deg<sup>-</sup>): 해당 정점이 도착지인 간선의 개수
 - out-degree (deg<sup>+</sup>): 해당 정점이 출발지인 간선의 개수
 
--ex) [그림(1)](#그래프의-종류)에서 degree of A = 3, degree of B = 1
+ex) [그림(1)](#그래프의-종류)에서 degree of A = 3, degree of B = 1
 
 ex) [그림(2)](#그래프의-종류)에서 deg<sup>-</sup>(A) = 1, deg<sup>+</sup>(A) = 2, deg<sup>-</sup>(B) = 1, deg<sup>+</sup>(B) = 0
 
@@ -122,6 +122,10 @@ vector<pair<int, int>> adjList[5];
 
 ## **탐색**
 
+그래프 자료구조를 통해 저장했다면 탐색하는 방법도 필요할 것입니다. 그래프를 탐색하는 방법에는 크게 DFS와 BFS가 있습니다.
+
 ### 1. DFS
+
+**DFS**는 **D**epth**F**irst**S**earch (깊이 우선 탐색)의 약자입니다.
 
 ### 2. BFS
