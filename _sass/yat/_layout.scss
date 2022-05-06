@@ -495,14 +495,14 @@ html {
 .post-nav {
   display: flex;
   justify-content: space-between;
-  margin: 72px 0 59px;
+  margin: 50px 0 50px;
   padding: 31px 0 0;
 
   a {
     @include relative-font-size(1.125);
     line-height: 15px;
     color: #666;
-    max-width: 70%;
+    max-width: 50%;
   }
 
   .previous:before {
