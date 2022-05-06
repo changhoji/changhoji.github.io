@@ -68,18 +68,26 @@ adj[i][j] = 1 (i정점에서 j정점으로 가는 간선이 존재)
 
 **예시**
 
-<Graph indexType="custom" height="400" width="400" nodes={[{label:0,center:{x:248.4,y:157.7}},{label:1,center:{x:236.7,y:286.7}},{label:2,center:{x:172.9,y:155.7}},{label:3,center:{x:138.1,y:223.4}},{label:4,center:{x:208.4,y:220.1}},{label:5,center:{x:281.8,y:225.4}}]} edges={[{source:0,target:2},{source:0,target:4},{source:0,target:5},{source:1,target:4},{source:1,target:5},{source:2,target:3},{source:2,target:4},{source:4,target:5}]} />
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/adj-matrix.png?raw=true" width="50%">
 
 위 그래프에 대한 인접행렬은 다음과 같이 표현할 수 있습니다.
 
-| \ | 1 | 2 | 3 | 4 |
-|---|---|---|---|---|
-| 1 | 
-| 2 |
-| 3 |
-| 4 |
+| \ | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| 1 | 0 | 0 | 1 | 0 | 1 |
+| 2 | 0 | 0 | 0 | 0 | 1 |
+| 3 | 1 | 0 | 0 | 1 | 1 |
+| 4 | 0 | 0 | 1 | 0 | 0 |
+| 5 | 1 | 1 | 1 | 0 | 0 |
 
-### 인접리스트
+~~~
+방향 그래프도 같은 방식으로 표현할 수 있습니다.
+
+가중 그래프의 경우 간선이 존재하면 그 간선의 가중치를 1 대신 적어서 표현할 수 있습니다.
+~~~
+
+### 2. 인접리스트
+
 
 
 
