@@ -55,7 +55,22 @@ ex) [그림(2)](#그래프의-종류)에서 deg<sup>-</sup>(A) = 1, deg<sup>+</s
 
 ## **표현**
 
-### 인접행렬
+### 1. 인접행렬
+
+그래프가 n개의 정점을 가질 때 n*n의 2차원 배열을 생성해 정보를 저장합니다.
+
+~~~
+int adj[10][10];
+
+adj[i][j] = 1 (i정점에서 j정점으로 가는 간선이 존재)
+          = 0 (그런 간선이 존재하지 않음)
+~~~
+
+**예시**
+
+<Graph indexType="custom" height="400" width="400" nodes={[{label:0,center:{x:248.4,y:157.7}},{label:1,center:{x:236.7,y:286.7}},{label:2,center:{x:172.9,y:155.7}},{label:3,center:{x:138.1,y:223.4}},{label:4,center:{x:208.4,y:220.1}},{label:5,center:{x:281.8,y:225.4}}]} edges={[{source:0,target:2},{source:0,target:4},{source:0,target:5},{source:1,target:4},{source:1,target:5},{source:2,target:3},{source:2,target:4},{source:4,target:5}]} />
+
+위 그래프에 대한 인접행렬은 다음과 같이 표현할 수 있습니다.
 
 | \ | 1 | 2 | 3 | 4 |
 |---|---|---|---|---|
