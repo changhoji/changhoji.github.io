@@ -55,10 +55,12 @@ ex) [그림(2)](#그래프의-종류)에서 deg<sup>-</sup>(A) = 1, deg<sup>+</s
 
 그래프가 n개의 정점을 가질 때 n*n의 2차원 배열을 생성해 정보를 저장합니다.
 
-- 선언: int adjMatrix[10][10];
+```C
+int adjMatrix[10][10]; //인접행렬 선언
 
-- adjMatrix[i][j] = 1 (i정점에서 j정점으로 가는 간선이 존재)
-- adjMatrix[i][j] = 0 (그런 간선이 존재하지 않음)
+adjMatrix[i][j] = 1 //i정점에서 j정점으로 가는 간선이 존재
+adjMatrix[i][j] = 0 //그런 간선이 존재하지 않음
+```
 
 
 **예시**
@@ -86,9 +88,12 @@ ex) [그림(2)](#그래프의-종류)에서 deg<sup>-</sup>(A) = 1, deg<sup>+</s
 
 인접리스트는 해당 정점에서 이웃한 정점들을 저장하고, 이를 표현하기 위해 vector를 사용할 수 있습니다.
 
-**vector<int> adjList[5];**
+```C++
+vector<int> adjList[5]; //인접리스트 선언
 
-adjMatrix[1][3] = 1 이면 adjList[1].push_back(3); 과 같이 처리합니다.
+//adjMatrix[1][3] = 1이면
+adjList[1].push_back(3); //과 같이 처리!
+```
 
 위 표를 인접리스트로 나타내면 다음과 같습니다.
 
@@ -103,8 +108,15 @@ adjMatrix[1][3] = 1 이면 adjList[1].push_back(3); 과 같이 처리합니다.
 adjMatrix에서 값이 0이던 부분을 생략하므로 메모리와 순회 시간을 아낄 수 있습니다.
 
 
-가중 그래프에서는 vector<int> adjList[5]; 대신 vector<pair<int, int>> adjList[5]; 와 같이 선언하고
-vector에 들어가는 pair의 first를 연결된 정점의 번호로, second를 간선의 가중치로 표현할 수 있습니다.
+가중 그래프에서는 
+```C++
+vector<int> adjList[5];
+```
+대신
+```C++
+vector<pair<int, int>> adjList[5];
+```
+와 같이 선언하고 pair의 first를 연결된 정점의 번호로, second를 간선의 가중치로 표현할 수 있습니다.
 
 ---
 
