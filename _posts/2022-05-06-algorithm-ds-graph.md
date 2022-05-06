@@ -126,6 +126,37 @@ vector<pair<int, int>> adjList[5];
 
 ### 1. DFS
 
-**DFS**는 **D**epth**F**irst**S**earch (깊이 우선 탐색)의 약자입니다.
+**DFS**는 **D**epth**F**irst**S**earch (깊이 우선 탐색)의 약자입니다. DFS의 탐색 순서를 그림을 통해 보면
+
+
+즉 진행하면서 더이상 갈 곳이 없을 때까지 탐색한 뒤, 다시 뒤로 돌아오는 방식입니다.
+
+```C++
+#include <iostream>
+#define MAX_NODE 50
+using namespace std;
+
+int N;
+bool visited[MAX_NODE+1] = { false,};
+int adjMatrix[MAX_NODE+1][MAX_NODE+1] = { 0,};
+
+~~~
+//N 입력받기
+//adjMatrix 설정
+~~~
+
+void DFS(int start) {
+    cout << start << ' ';
+    visited[start] = true;
+    
+    for (int i = 1; i <= N; i++) { //i=다음 방문할 정점
+        if (visited[i]) continue;  //이미 방문했거나
+        if (!adjMatrix[start][i]) continue;  //연결되어있지 않으면 건너뛰기
+
+        DFS(i);
+    }
+}
+
+```
 
 ### 2. BFS
