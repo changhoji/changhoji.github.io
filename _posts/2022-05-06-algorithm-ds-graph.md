@@ -152,8 +152,9 @@ vector<pair<int, int>> adjList[5];
 
 시작 노드를 스택에 push합니다.  
 
-| 1 |
-|---|
+| Stack |
+|:---:|
+|1|
 
 <img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/1.png?raw=true" width="70%">
 
@@ -161,16 +162,21 @@ stack에서 pop을 하고(1) 그곳에서 연결된 정점들(2, 4, 5)을 stack�
 
 이때 2, 4, 5 순서대로 push하지 않고 5, 4, 2 순서대로 push하는 이유는 그림의 순서대로 탐색하게 하기 위해서 입니다. (2, 4, 5 순서대로 push해도 dfs를 하는데는 문제 없습니다.)  
 
-| 5 | 4 | 2 |
-|---|---|---|
+| Stack |
+|:---:|
+| 2 |
+| 4 |
+| 5 |
 
 <img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/2.png?raw=true" width="70%">
 
 stack에서 pop을 하고(2) 그곳에서 연결된 정점(3)을 stack에 push합니다.  
 
-| 5 | 4 | 3 |
-|---|---|---|
-
+| Stack |
+|:---:|
+| 3 |
+| 4 |
+| 5 |
 
 <img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/3.png?raw=true" width="70%">
 
@@ -178,8 +184,10 @@ stack에서 pop을 합니다. (3)
 
 다만 이때 3번 정점에서 더 갈 수 있는 정점이 없기 때문에 push하지 않습니다.  
 
-| 5 | 4 |
-|---|---|
+| Stack |
+|:---:|
+| 4 |
+| 5 |
 
 <img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/4.png?raw=true" width="70%">
 
@@ -187,22 +195,25 @@ stack에서 pop을 합니다. (4)
 
 다만 이때 4번 정점에서 더 갈 수 있는 정점이 없기 때문에 push하지 않습니다.  
 
+| Stack |
+|:---:|
 | 5 |
-|---|
 
 <img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/5.png?raw=true" width="70%">
 
 stack에서 pop을 하고(5) 그곳에서 연결된 정점(6)을 stack에 push합니다.  
 
+| Stack |
+|:---:|
 | 6 |
-|---|
 
 <img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/6.png?raw=true" width="70%">
 
 stack에서 pop을 하고(6) 그곳에서 연결된 정점(7)을 stack에 push합니다.  
 
+| Stack |
+|:---:|
 | 7 |
-|---|
 
 <img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/7.png?raw=true" width="70%">
 
