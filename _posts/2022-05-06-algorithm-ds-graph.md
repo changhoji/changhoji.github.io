@@ -128,19 +128,19 @@ vector<pair<int, int>> adjList[5];
 
 **DFS**는 **D**epth**F**irst**S**earch (깊이 우선 탐색)의 약자입니다. DFS의 탐색 순서를 그림을 통해 보면
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/1.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/1.png?raw=true" width="70%">
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/2.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/2.png?raw=true" width="70%">
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/3.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/3.png?raw=true" width="70%">
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/4.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/4.png?raw=true" width="70%">
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/5.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/5.png?raw=true" width="70%">
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/6.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/6.png?raw=true" width="70%">
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/7.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/7.png?raw=true" width="70%">
 
 즉 진행하면서 더이상 갈 곳이 없을 때까지 탐색한 뒤, 다시 뒤로 돌아오는 방식이기 때문에 스택, 재귀를 이용해 구현할 수 있습니다.  
 
@@ -154,9 +154,8 @@ vector<pair<int, int>> adjList[5];
 
 | 1 |
 |---|
-|l|
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/1.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/1.png?raw=true" width="70%">
 
 stack에서 pop을 하고(1) 그곳에서 연결된 정점들(2, 4, 5)을 stack에 push합니다.
 
@@ -165,7 +164,7 @@ stack에서 pop을 하고(1) 그곳에서 연결된 정점들(2, 4, 5)을 stack�
 | 5 | 4 | 2 |
 |---|---|---|
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/2.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/2.png?raw=true" width="70%">
 
 stack에서 pop을 하고(2) 그곳에서 연결된 정점(3)을 stack에 push합니다.  
 
@@ -173,7 +172,7 @@ stack에서 pop을 하고(2) 그곳에서 연결된 정점(3)을 stack에 push�
 |---|---|---|
 
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/3.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/3.png?raw=true" width="70%">
 
 stack에서 pop을 합니다. (3)
 
@@ -182,7 +181,7 @@ stack에서 pop을 합니다. (3)
 | 5 | 4 |
 |---|---|
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/4.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/4.png?raw=true" width="70%">
 
 stack에서 pop을 합니다. (4)
 
@@ -191,21 +190,21 @@ stack에서 pop을 합니다. (4)
 | 5 |
 |---|
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/5.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/5.png?raw=true" width="70%">
 
 stack에서 pop을 하고(5) 그곳에서 연결된 정점(6)을 stack에 push합니다.  
 
 | 6 |
 |---|
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/6.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/6.png?raw=true" width="70%">
 
 stack에서 pop을 하고(6) 그곳에서 연결된 정점(7)을 stack에 push합니다.  
 
 | 7 |
 |---|
 
-<image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/7.png?raw=true" width="70%">
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/7.png?raw=true" width="70%">
 
 stack에서 pop을 합니다. stack을 다 비웠기 때문에 탐색을 종료합니다.  
 
