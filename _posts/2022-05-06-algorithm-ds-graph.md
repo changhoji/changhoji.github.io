@@ -142,16 +142,16 @@ vector<pair<int, int>> adjList[5];
 
 <image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/7.png?raw=true" width="70%">
 
-
 즉 진행하면서 더이상 갈 곳이 없을 때까지 탐색한 뒤, 다시 뒤로 돌아오는 방식이기 때문에 스택, 재귀를 이용해 구현할 수 있습니다.  
 
 ---
 
-스택을 이용할 때 작동 방식에 대해 알아보겠습니다. (오른쪽을 top으로 생각하겠습니다.)
+스택을 이용할 때 작동 방식에 대해 알아보겠습니다. (오른쪽을 top으로 생각하겠습니다.)  
 
 주의할 점은 stack에 정점 번호를 push할 때가 아닌 **pop할 때** 그 정점을 탐색합니다.
 
 시작 노드를 스택에 push합니다.  
+
 | 1 |
 |---|
 
