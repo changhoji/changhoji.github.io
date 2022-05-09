@@ -154,6 +154,7 @@ vector<pair<int, int>> adjList[5];
 
 | 1 |
 |---|
+|l|
 
 <image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/1.png?raw=true" width="70%">
 
