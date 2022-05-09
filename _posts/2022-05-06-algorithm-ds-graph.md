@@ -142,7 +142,9 @@ vector<pair<int, int>> adjList[5];
 
 <image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/7.png?raw=true" width="70%">
 
+
 즉 진행하면서 더이상 갈 곳이 없을 때까지 탐색한 뒤, 다시 뒤로 돌아오는 방식이기 때문에 스택, 재귀를 이용해 구현할 수 있습니다.
+
 
 ---
 
