@@ -143,8 +143,7 @@ vector<pair<int, int>> adjList[5];
 <image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/7.png?raw=true" width="70%">
 
 
-즉 진행하면서 더이상 갈 곳이 없을 때까지 탐색한 뒤, 다시 뒤로 돌아오는 방식이기 때문에 스택, 재귀를 이용해 구현할 수 있습니다.
-
+즉 진행하면서 더이상 갈 곳이 없을 때까지 탐색한 뒤, 다시 뒤로 돌아오는 방식이기 때문에 스택, 재귀를 이용해 구현할 수 있습니다.  
 
 ---
 
@@ -152,7 +151,7 @@ vector<pair<int, int>> adjList[5];
 
 주의할 점은 stack에 정점 번호를 push할 때가 아닌 **pop할 때** 그 정점을 탐색합니다.
 
-시작 노드를 스택에 push합니다. 
+시작 노드를 스택에 push합니다.  
 | 1 |
 |---|
 
@@ -160,14 +159,14 @@ vector<pair<int, int>> adjList[5];
 
 stack에서 pop을 하고(1) 그곳에서 연결된 정점들(2, 4, 5)을 stack에 push합니다.
 
-이때 2, 4, 5 순서대로 push하지 않고 5, 4, 2 순서대로 push하는 이유는 그림의 순서대로 탐색하게 하기 위해서 입니다. (2, 4, 5 순서대로 push해도 dfs를 하는데는 문제 없습니다.)
+이때 2, 4, 5 순서대로 push하지 않고 5, 4, 2 순서대로 push하는 이유는 그림의 순서대로 탐색하게 하기 위해서 입니다. (2, 4, 5 순서대로 push해도 dfs를 하는데는 문제 없습니다.)  
 
 | 5 | 4 | 2 |
 |---|---|---|
 
 <image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/2.png?raw=true" width="70%">
 
-stack에서 pop을 하고(2) 그곳에서 연결된 정점(3)을 stack에 push합니다.
+stack에서 pop을 하고(2) 그곳에서 연결된 정점(3)을 stack에 push합니다.  
 
 | 5 | 4 | 3 |
 |---|---|---|
@@ -177,7 +176,7 @@ stack에서 pop을 하고(2) 그곳에서 연결된 정점(3)을 stack에 push�
 
 stack에서 pop을 합니다. (3)
 
-다만 이때 3번 정점에서 더 갈 수 있는 정점이 없기 때문에 push하지 않습니다.
+다만 이때 3번 정점에서 더 갈 수 있는 정점이 없기 때문에 push하지 않습니다.  
 
 | 5 | 4 |
 |---|---|
@@ -186,28 +185,28 @@ stack에서 pop을 합니다. (3)
 
 stack에서 pop을 합니다. (4)
 
-다만 이때 4번 정점에서 더 갈 수 있는 정점이 없기 때문에 push하지 않습니다.
+다만 이때 4번 정점에서 더 갈 수 있는 정점이 없기 때문에 push하지 않습니다.  
 
 | 5 |
 |---|
 
 <image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/5.png?raw=true" width="70%">
 
-stack에서 pop을 하고(5) 그곳에서 연결된 정점(6)을 stack에 push합니다.
+stack에서 pop을 하고(5) 그곳에서 연결된 정점(6)을 stack에 push합니다.  
 
 | 6 |
 |---|
 
 <image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/6.png?raw=true" width="70%">
 
-stack에서 pop을 하고(6) 그곳에서 연결된 정점(7)을 stack에 push합니다.
+stack에서 pop을 하고(6) 그곳에서 연결된 정점(7)을 stack에 push합니다.  
 
 | 7 |
 |---|
 
 <image src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/DFS/7.png?raw=true" width="70%">
 
-stack에서 pop을 합니다. stack을 다 비웠기 때문에 탐색을 종료합니다.
+stack에서 pop을 합니다. stack을 다 비웠기 때문에 탐색을 종료합니다.  
 
 ---
 
