@@ -146,7 +146,7 @@ vector<pair<int, int>> adjList[5];
 
 ---
 
-스택을 이용할 때 작동 방식에 대해 알아보겠습니다. (오른쪽을 top으로 생각하겠습니다.)  
+스택을 이용할 때 작동 방식에 대해 알아보겠습니다.
 
 주의할 점은 stack에 정점 번호를 push할 때가 아닌 **pop할 때** 그 정점을 탐색합니다.
 
@@ -267,7 +267,7 @@ void DFS(int start) {
 </div>
 </details>
 
-#
+<br>
 또는 재귀로 구현할 수도 있습니다.
 
 <details>
@@ -309,4 +309,141 @@ void DFS(int start) {
 
 ### 2. BFS
 
+**BFS**는 **B**readth**F**irst**S**earch의 (너비 우선 탐색)의 약자입니다. BFS의 탐색 순서를 그림을 통해 보면
 
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/1.png?raw=true" width="70%">
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/2.png?raw=true" width="70%">
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/3.png?raw=true" width="70%">
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/4.png?raw=true" width="70%">
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/5.png?raw=true" width="70%">
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/6.png?raw=true" width="70%">
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/7.png?raw=true" width="70%">
+
+DFS와 다른 점은 DFS에서는 한 정점에서 계속 탐색을 진행했지만 BFS에서는 한 정점에서 주변 이웃한 노드들까지만 탐색을 한 뒤 탐색 순번을 넘겨준다는 것입니다.
+
+이는 큐 자료구조를 이용해 구현할 수 있습니다.
+
+---
+
+큐를 이용할 때 작동 방식에 대해 알아보겠습니다.
+
+이번에도 마찬가지로 queue에서 **pop할 때** 그 정점을 탐색합니다.
+
+시작 노드를 큐에 push합니다.
+
+|Queue||
+|:---:|:---:|
+|**front**|1|
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/1.png?raw=true" width="70%">
+
+queue에서 pop을 하고(1) 그곳에서 연결된 정점들(2, 4, 5)를 queue에 push합니다.
+
+이때 같이 push된 2, 4, 5는 탐색에서 같은 우선순위를 지닌다 생각하시면 됩니다.
+
+|Queue||||
+|:---:|:---:|:---:|:---:|
+|**front**|2|4|5|
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/2.png?raw=true" width="70%">
+
+queue에서 pop을 해 2번 정점을 탐색하고 그곳에서 연결된 정점(3)을 queue에 push합니다.
+
+이때 queue를 이용해 back에 push되기 때문에 미리 저장된 4, 5번보다 탐색 순위가 늦게 되고, 이런 원리로 너비 우선 탐색을 진행할 수 있습니다.
+
+|Queue||||
+|:---:|:---:|:---:|:---:|
+|**front**|4|5|3|
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/3.png?raw=true" width="70%">
+
+queue에서 pop을 해 4번 정점을 탐색하고 더이상 방문 가능한 이웃한 정점이 없으므로 넘어갑니다.
+
+|Queue|||
+|:---:|:---:|:---:|
+|**front**|5|3|
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/4.png?raw=true" width="70%">
+
+queue에서 pop을 해 5번 정점을 탐색하고 연결된 정점(6)을 push합니다.
+
+|Queue|||
+|:---:|:---:|:---:|
+|**front**|3|6|
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/5.png?raw=true" width="70%">
+
+queue에서 pop을 해 3번 정점을 탐색하고 더이상 방문 가능한 이웃한 정점이 없으므로 넘어갑니다.
+
+|Queue||
+|:---:|:---:|
+|**front**|6|
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/6.png?raw=true" width="70%">
+
+queue에서 pop을 해 6번 정점을 탐색하고 연결된 정점(7)을 push합니다.
+
+|Queue||
+|:---:|:---:|
+|**front**|7|
+
+<img src = "https://github.com/changhoji/changhoji.github.io/blob/main/assets/images/graph/BFS/7.png?raw=true" width="70%">
+
+queue에서 pop을 해 7번 정점을 탐색하고 큐가 비었으므로 BFS를 종료합니다.
+
+---
+
+### BFS 코드
+
+<details>
+<summary>BFS_CODE</summary>
+
+<div markdown="1">
+
+```C++
+#include <iostream>
+#include <queue>
+#define MAX_NODE 50
+using namespace std;
+
+int N;
+bool visited[MAX_NODE+1] = { false,};
+int adjMatrix[MAX_NODE+1][MAX_NODE+1] = { 0,};
+
+~~~
+//N 입력받기
+//adjMatrix 설정
+~~~
+
+void BFS(int start) {
+    queue<int> q;
+
+    q.push(start);
+    visited[start] = true;
+
+    while (!q.empty()) {
+        int cur = q.front();
+        q.pop();
+
+        cout << cur << " ";
+
+        for (int i = 1; i <= N; i++) {
+            if (adjMatrix[cur][i] == 1 && visited[i] == false) {
+                visited[i] = true;
+                q.push(i);
+            }
+        }
+    }
+}
+```
+</div>
+</details>
+
+<br>
+감사합니다.
