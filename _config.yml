@@ -182,7 +182,7 @@ yat:
 markdown: kramdown
 kmarkdown:
   input: GFM
-  syntax_highlighter: bas16.light
+  syntax_highlighter: base16.light
 
 plugins:
   - jekyll-feed
