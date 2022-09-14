@@ -177,7 +177,7 @@ yat:
 #   client_secret: "Your client secret"
 #   redirect_uri: "Your redirect url"   # If you use a custom domain name
 
-# Build settings
+# Build settings 
 # highlighter: none
 markdown: kramdown
 kmarkdown:
